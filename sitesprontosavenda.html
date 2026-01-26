@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sites Prontos - Guitar Nonsense</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body { font-family: 'Roboto', sans-serif; background-color: #111111; color: white; }
+        
+        /* Fonte da Marca */
+        .brand-font { font-family: 'UnifrakturMaguntia', cursive; }
+        
+        /* Card do Produto */
+        .product-card {
+            background-color: #1f1f1f;
+            border: 1px solid #333;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            border-color: #ea580c;
+            box-shadow: 0 0 20px rgba(234, 88, 12, 0.2);
+        }
+
+        /* Preço */
+        .price-tag {
+            font-family: 'UnifrakturMaguntia', cursive;
+            color: #ea580c;
+        }
+
+        /* Botões */
+        .btn-orange {
+            background-color: #ea580c;
+            color: white;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: background 0.2s;
+        }
+        .btn-orange:hover { background-color: #c2410c; }
+
+        .btn-outline {
+            border: 1px solid #555;
+            color: #ccc;
+            text-transform: uppercase;
+            transition: all 0.2s;
+        }
+        .btn-outline:hover { border-color: white; color: white; background: rgba(255,255,255,0.05); }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen">
+
+    <header class="container mx-auto px-4 py-8 relative z-10 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div>
+            <h1 class="brand-font text-4xl text-white tracking-wider">SITES PRONTOS</h1>
+            <p class="text-gray-400 text-sm uppercase tracking-widest">MODELOS PREMIUM &bull; ENTREGA IMEDIATA</p>
+        </div>
+        <a href="index.html" class="border border-gray-600 text-gray-300 px-6 py-2 rounded hover:bg-white hover:text-black transition-colors uppercase text-sm font-bold">
+            <i class="fa-solid fa-arrow-left mr-2"></i> Voltar
+        </a>
+    </header>
+
+    <main class="container mx-auto px-4 pb-20 flex-1 relative z-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto mt-4">
+
+            <div class="product-card rounded-xl overflow-hidden p-4">
+                <div class="h-40 bg-gray-800 rounded mb-4 flex items-center justify-center border border-gray-700 relative group">
+                    <i class="fa-solid fa-rocket text-4xl text-gray-600 group-hover:text-orange-500 transition-colors"></i>
+                    </div>
+                
+                <div class="flex justify-between items-start mb-2">
+                    <h2 class="text-xl font-bold text-white">LANDING PAGE VENDAS</h2>
+                    <span class="price-tag text-2xl">R$ 49,90</span>
+                </div>
+                <p class="text-gray-400 text-sm mb-6 flex-grow">
+                    Modelo focado em alta conversão. Ideal para infoprodutos, e-books e cursos. Seções de "Quem sou", "Benefícios" e "Depoimentos".
+                </p>
+                
+                <div class="mt-auto flex gap-2">
+                    <button onclick="verModelo('landing_page')" class="btn-outline py-2 px-2 rounded w-1/2 text-xs font-bold">
+                        <i class="fa-solid fa-eye mr-
