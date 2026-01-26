@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pacote Avançado - Guitar Nonsense</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body { font-family: 'Roboto', sans-serif; background-color: #111111; color: white; }
+        .brand-font { font-family: 'UnifrakturMaguntia', cursive; }
+        
+        /* Container de Vidro */
+        .glass-card {
+            background: rgba(31, 31, 31, 0.9);
+            border: 1px solid #333;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 0 30px rgba(0,0,0,0.5);
+        }
+
+        /* Botão Laranja Neon */
+        .btn-neon {
+            background-color: #ea580c;
+            color: white;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 0 15px rgba(234, 88, 12, 0.4);
+            transition: all 0.3s;
+        }
+        .btn-neon:hover {
+            background-color: #c2410c;
+            box-shadow: 0 0 25px rgba(234, 88, 12, 0.7);
+            transform: scale(1.02);
+        }
+
+        /* Modal */
+        .modal { transition: opacity 0.25s ease; }
+        body.modal-active { overflow: hidden; }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen items-center justify-center p-4">
+
+    <div class="absolute top-4 left-4 z-20">
+        <a href="index.html" class="text-gray-400 hover:text-white transition-colors font-bold text-sm uppercase flex items-center gap-2">
+            <i class="fa-solid fa-arrow-left"></i> Voltar
+        </a>
+    </div>
+
+    <main class="glass-card w-full max-w-2xl rounded-2xl p-8 md:p-12 relative z-10 border-t-4 border-orange-600">
+        
+        <div class="text-center mb-8">
+            <i class="fa-solid fa-gem text-5xl text-orange-500 mb-4 drop-shadow-[0_0_10px_rgba(234,88,12,0.5)]"></i>
+            <h1 class="brand-font text-5xl md:text-6xl text-white tracking-wider mb-2">PACOTE AVANÇADO</h1>
+            <p class="text-gray-400 font-bold uppercase tracking-[0.2em] text-sm">ALTA PERFORMANCE E ESCALA</p>
+        </div>
+
+        <div class="bg-black/30 p-6 rounded-lg border border-gray-700 mb-8">
+            <p class="text-lg md:text-xl text-gray-200 leading-relaxed text-center font-light">
