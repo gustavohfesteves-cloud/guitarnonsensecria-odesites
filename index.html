@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guitar Nonsense - Criação de Sites</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body { font-family: 'Roboto', sans-serif; background-color: #111111; color: white; }
+        
+        /* Fonte Gótica para a Marca */
+        .brand-font { font-family: 'UnifrakturMaguntia', cursive; }
+        
+        /* Efeitos dos Cards */
+        .card-box {
+            background-color: #1f1f1f;
+            border: 1px solid #333;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+        .card-box:hover {
+            transform: translateY(-5px);
+            border-color: #555;
+        }
+
+        /* Destaque Laranja */
+        .highlight-card {
+            border: 2px solid #ea580c; /* Laranja */
+            box-shadow: 0 0 15px rgba(234, 88, 12, 0.2);
+        }
+        .btn-orange {
+            background-color: #ea580c;
+            color: white;
+            font-weight: bold;
+            transition: background 0.2s;
+        }
+        .btn-orange:hover { background-color: #c2410c; }
+
+        .btn-outline {
+            border: 1px solid #666;
+            color: #ccc;
+            background: transparent;
+            transition: all 0.2s;
+        }
+        .btn-outline:hover { border-color: white; color: white; }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen">
+
+    <header class="text-center py-8 relative z-10">
+        <h1 class="brand-font text-5xl md:text-6xl text-white tracking-wider mb-2">GUITAR NONSENSE</h1>
+        <p class="text-gray-400 font-bold tracking-widest uppercase text-sm md:text-lg">CRIAÇÃO DE SITES.COM.BR</p>
+    </header>
+
+    <main class="container mx-auto px-4 pb-20 flex-1 relative z-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+
+            <div class="card-box rounded-lg p-6 flex flex-col items-center text-center">
+                <div class="w-full h-40 bg-gray-800 rounded mb-4 flex items-center justify-center border border-gray-700">
+                    <i class="fa-solid fa-code text-4xl text-gray-600"></i>
+                    </div>
+                <h2 class="text-xl font-bold uppercase mb-6">SITES DESENVOLVIDOS<br>POR NÓS</h2>
+                <a href="sitesdesenvolvidospornos.html" class="mt-auto btn-outline py-2 px-6 rounded w-full uppercase text-sm">
+                    Mais Detalhes
+                </a>
+            </div>
+
+            <div class="card-box highlight-card rounded-lg p-6 flex flex-col items-center text-center relative">
+                <div class="w-full h-40 bg-gray-800 rounded mb-4 flex items-center justify-center border border-gray-700">
+                    <i class="fa-solid fa-rocket text-4xl text-orange-500"></i>
+                </div>
+                
+                <p class="text-gray-400 text-sm font-bold uppercase mb-1">A PARTIR DE</p>
+                <p class="text-5xl font-black text-orange-500 mb-4" style="font-family: 'UnifrakturMaguntia';">49,90</p>
+                
+                <h2 class="text-xl font-bold uppercase mb-6">SITES PRONTOS<br>A VENDA</h2>
+                
+                <div class="mt-auto flex gap-2 w-full">
+                    <a href="sitesprontosavenda.html" class="btn-outline py-2 px-4 rounded w-1/2 uppercase text-sm text-center">Detalhes</a>
+                    <a href="sitesprontosavenda.html" class="btn-orange py-2 px-4 rounded w-1/2 uppercase text-sm text-center">Comprar</a>
+                </div>
+            </div>
+
+            <div class="card-box rounded-lg p-6 flex flex-col items-center text-center">
+                <div class="w-full h-40 bg-gray-800 rounded mb-4 flex items-center justify-center border border-gray-700">
+                    <i class="fa-solid fa-cube text-4xl text-gray-600"></i>
+                </div>
+                <h2 class="text-xl font-bold uppercase mb-6">PACOTE BÁSICO</h2>
+                <div class="mt-auto flex gap-2 w-full">
+                    <a href="pacotebasico.html" class="btn-outline py-2 px-4 rounded w-1/2 uppercase text-sm text-center">Detalhes</a>
+                    <a href="pacotebasico.html" class="btn-orange py-2 px-4 rounded w-1/2 uppercase text-sm text-center">Comprar</a>
+                </div>
+            </div>
+
+            <div class="card-box rounded-lg p-6 flex flex-col items-center text-center">
+                <div class="w-full h-40 bg-gray-800 rounded mb-4 flex items-center justify-center border border-gray-700">
+                    <i class="fa-solid fa-layer-group text-4xl text-gray-600"></i>
+                </div>
+                <h2 class="text-xl font-bold uppercase mb-6">PACOTE MÉDIO</h2>
+                <div class="mt-auto flex gap-2 w-full">
+                    <a href="pacotemedio.html" class="btn-outline py-2 px-4 rounded w-1/2 uppercase text-sm text-center">Detalhes</a>
+                    <a href="pacotemedio.html" class="btn-outline py-2 px-4 rounded w-1/2 uppercase text-sm text-center hover:bg-white hover:text-black">Ver Mais</a>
+                </div>
+            </div>
+
+            <div class="card-box rounded-lg p-6 flex flex-col items-center text-center">
+                <div class="w-full h-40 bg-gray-800 rounded mb-4 flex items-center justify-center border border-gray-700">
+                    <i class="fa-solid fa-gem text-4xl text-gray-600"></i>
+                </div>
+                <h2 class="text-xl font-bold uppercase mb-6">PACOTE AVANÇADO</h2>
+                <a href="pacoteavancado.html" class="mt-auto btn-outline py-2 px-6 rounded w-full uppercase text-sm">
+                    Mais Detalhes
+                </a>
+            </div>
+
+            <div class="card-box rounded-lg p-6 flex flex-col items-center text-center">
+                <div class="w-full h-40 bg-gray-800 rounded mb-4 flex items-center justify-center border border-gray-700">
+                    <i class="fa-solid fa-infinity text-4xl text-gray-600"></i>
+                </div>
+                <h2 class="text-xl font-bold uppercase mb-6">PACOTE ILIMITADO</h2>
+                <a href="pacoteilimitado.html" class="mt-auto btn-orange py-2 px-6 rounded w-full uppercase text-sm shadow-[0_0_10px_rgba(234,88,12,0.5)]">
+                    Comprar
+                </a>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="text-center py-6 text-gray-600 text-xs relative z-10">
+        <p>&copy; 2026 Guitar Nonsense. Todos os direitos reservados.</p>
+    </footer>
+
+    <div style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; background: url('fundo_site.jpg') center/cover no-repeat; opacity: 0.4;"></div>
+
+</body>
+</html>
