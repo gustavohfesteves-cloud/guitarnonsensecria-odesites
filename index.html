@@ -3,124 +3,179 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guitar Nonsense - Criação de Sites</title>
+    <title>Guitar Nonsense - Desenvolvedora de Sites</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
-        body { font-family: 'Roboto', sans-serif; background-color: #111111; color: white; }
+        body { font-family: 'Roboto', sans-serif; background-color: #050505; color: white; }
         
-        /* Fonte Gótica para a Marca */
-        .brand-font { font-family: 'UnifrakturMaguntia', cursive; }
+        /* Fonte da Marca (Sofisticada) */
+        .brand-font { font-family: 'Playfair Display', serif; }
         
-        /* Efeitos dos Cards */
+        /* Card Base */
         .card-box {
-            background-color: #1f1f1f;
-            border: 1px solid #333;
-            transition: transform 0.2s, border-color 0.2s;
+            background-color: #111; /* Preto levemente mais claro */
+            border: 1px solid #222;
+            transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
         }
         .card-box:hover {
             transform: translateY(-5px);
-            border-color: #555;
+            border-color: #3b82f6; /* Azul no Hover */
+            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.15);
         }
 
-        /* Destaque Laranja */
+        /* Card Destaque (Sites Prontos) */
         .highlight-card {
-            border: 2px solid #ea580c; /* Laranja */
-            box-shadow: 0 0 15px rgba(234, 88, 12, 0.2);
+            border: 2px solid #3b82f6; /* Azul */
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.2);
+            background: linear-gradient(180deg, #111 0%, #0f172a 100%);
         }
-        .btn-orange {
-            background-color: #ea580c;
+
+        /* Botão Verde (Venda) */
+        .btn-green {
+            background-color: #16a34a; /* Verde Sólido */
             color: white;
             font-weight: bold;
-            transition: background 0.2s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.2s;
+            border: 1px solid #15803d;
         }
-        .btn-orange:hover { background-color: #c2410c; }
+        .btn-green:hover {
+            background-color: #22c55e; /* Verde mais claro */
+            box-shadow: 0 0 15px rgba(34, 197, 94, 0.5);
+        }
 
+        /* Botão Outline */
         .btn-outline {
-            border: 1px solid #666;
+            border: 1px solid #444;
             color: #ccc;
             background: transparent;
             transition: all 0.2s;
+            text-transform: uppercase;
+            font-size: 0.85rem;
         }
-        .btn-outline:hover { border-color: white; color: white; }
+        .btn-outline:hover {
+            border-color: #fff;
+            color: white;
+            background: rgba(255,255,255,0.05);
+        }
+
+        /* Imagens dos Cards */
+        .card-img-container {
+            width: 100%;
+            height: 180px; /* Altura fixa para padronizar */
+            background-color: #000;
+            border-radius: 0.5rem;
+            margin-bottom: 1rem;
+            overflow: hidden;
+            border: 1px solid #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .card-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Garante que a imagem cubra a área sem esticar */
+            transition: transform 0.5s;
+        }
+        .card-box:hover .card-img-container img {
+            transform: scale(1.05);
+        }
     </style>
 </head>
 <body class="flex flex-col min-h-screen">
 
-    <header class="text-center py-8 relative z-10">
-        <h1 class="brand-font text-5xl md:text-6xl text-white tracking-wider mb-2">GUITAR NONSENSE</h1>
-        <p class="text-gray-400 font-bold tracking-widest uppercase text-sm md:text-lg">CRIAÇÃO DE SITES.COM.BR</p>
+    <header class="text-center py-10 relative z-10">
+        <h1 class="brand-font text-3xl md:text-5xl text-white tracking-widest uppercase font-bold drop-shadow-lg">
+            GuitarNonsense <span class="text-blue-500">Desenvolvedora de Sites</span>
+        </h1>
+        <div class="h-1 w-24 bg-gradient-to-r from-green-500 to-blue-500 mx-auto mt-4 rounded-full"></div>
     </header>
 
     <main class="container mx-auto px-4 pb-20 flex-1 relative z-10">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
 
-            <div class="card-box rounded-lg p-6 flex flex-col items-center text-center">
-                <div class="w-full h-40 bg-gray-800 rounded mb-4 flex items-center justify-center border border-gray-700">
-                    <i class="fa-solid fa-code text-4xl text-gray-600"></i>
+            <div class="card-box rounded-xl p-6 flex flex-col items-center text-center">
+                <div class="card-img-container">
+                    <img src="sitesdesenvolvidospornos.jpeg" alt="Portfolio">
+                </div>
+                <h2 class="text-lg font-bold uppercase mb-6 tracking-wide text-gray-100">SITES DESENVOLVIDOS<br>POR NÓS</h2>
+                <a href="sitesdesenvolvidospornos.html" class="mt-auto btn-outline py-3 px-6 rounded w-full">
+                    Mais Detalhes
+                </a>
+            </div>
+
+            <div class="card-box highlight-card rounded-xl p-6 flex flex-col items-center text-center relative transform md:-translate-y-4">
+                
+                <div class="absolute -top-3 bg-blue-600 text-white text-xs font-bold px-4 py-1 rounded-full shadow-lg tracking-widest uppercase">
+                    Mais Popular
+                </div>
+
+                <div class="card-img-container" style="border-color: #3b82f6;">
+                    <img src="sitesprontosavenda.jpeg" alt="Sites Prontos">
+                </div>
+                
+                <p class="text-gray-400 text-xs font-bold uppercase mb-1 tracking-widest">A PARTIR DE</p>
+                <p class="text-5xl font-black text-white mb-4 brand-font">
+                    <span class="text-2xl align-top text-green-500">R$</span> 49,90
+                </p>
+                
+                <h2 class="text-xl font-bold uppercase mb-6 text-blue-100">SITES PRONTOS<br>A VENDA</h2>
+                
+                <div class="mt-auto flex gap-3 w-full">
+                    <a href="sitesprontosavenda.html" class="btn-outline py-3 rounded w-1/2 text-center">Detalhes</a>
+                    <a href="sitesprontosavenda.html" class="btn-green py-3 rounded w-1/2 text-center shadow-lg">Comprar</a>
+                </div>
+            </div>
+
+            <div class="card-box rounded-xl p-6 flex flex-col items-center text-center">
+                <div class="card-img-container">
+                    <img src="pacotebasico.jpeg" alt="Pacote Básico">
+                </div>
+                <h2 class="text-lg font-bold uppercase mb-6 tracking-wide text-gray-100">PACOTE BÁSICO</h2>
+                <div class="mt-auto flex gap-3 w-full">
+                    <a href="pacotebasico.html" class="btn-outline py-3 rounded w-1/2 text-center">Detalhes</a>
+                    <a href="pacotebasico.html" class="btn-green py-3 rounded w-1/2 text-center">Comprar</a>
+                </div>
+            </div>
+
+            <div class="card-box rounded-xl p-6 flex flex-col items-center text-center">
+                <div class="card-img-container relative group">
+                    <div class="absolute inset-0 flex items-center justify-center bg-gray-900">
+                        <i class="fa-solid fa-layer-group text-5xl text-gray-700 group-hover:text-blue-500 transition-colors"></i>
                     </div>
-                <h2 class="text-xl font-bold uppercase mb-6">SITES DESENVOLVIDOS<br>POR NÓS</h2>
-                <a href="sitesdesenvolvidospornos.html" class="mt-auto btn-outline py-2 px-6 rounded w-full uppercase text-sm">
+                </div>
+                <h2 class="text-lg font-bold uppercase mb-6 tracking-wide text-gray-100">PACOTE MÉDIO</h2>
+                <div class="mt-auto flex gap-3 w-full">
+                    <a href="pacotemedio.html" class="btn-outline py-3 rounded w-1/2 text-center">Detalhes</a>
+                    <a href="pacotemedio.html" class="btn-outline py-3 rounded w-1/2 text-center hover:bg-white hover:text-black">Ver Mais</a>
+                </div>
+            </div>
+
+            <div class="card-box rounded-xl p-6 flex flex-col items-center text-center">
+                <div class="card-img-container relative group">
+                    <div class="absolute inset-0 flex items-center justify-center bg-gray-900">
+                        <i class="fa-solid fa-gem text-5xl text-gray-700 group-hover:text-blue-500 transition-colors"></i>
+                    </div>
+                </div>
+                <h2 class="text-lg font-bold uppercase mb-6 tracking-wide text-gray-100">PACOTE AVANÇADO</h2>
+                <a href="pacoteavancado.html" class="mt-auto btn-outline py-3 px-6 rounded w-full">
                     Mais Detalhes
                 </a>
             </div>
 
-            <div class="card-box highlight-card rounded-lg p-6 flex flex-col items-center text-center relative">
-                <div class="w-full h-40 bg-gray-800 rounded mb-4 flex items-center justify-center border border-gray-700">
-                    <i class="fa-solid fa-rocket text-4xl text-orange-500"></i>
+            <div class="card-box rounded-xl p-6 flex flex-col items-center text-center">
+                <div class="card-img-container relative group">
+                    <div class="absolute inset-0 flex items-center justify-center bg-gray-900">
+                        <i class="fa-solid fa-infinity text-5xl text-gray-700 group-hover:text-green-500 transition-colors"></i>
+                    </div>
                 </div>
-                
-                <p class="text-gray-400 text-sm font-bold uppercase mb-1">A PARTIR DE</p>
-                <p class="text-5xl font-black text-orange-500 mb-4" style="font-family: 'UnifrakturMaguntia';">49,90</p>
-                
-                <h2 class="text-xl font-bold uppercase mb-6">SITES PRONTOS<br>A VENDA</h2>
-                
-                <div class="mt-auto flex gap-2 w-full">
-                    <a href="sitesprontosavenda.html" class="btn-outline py-2 px-4 rounded w-1/2 uppercase text-sm text-center">Detalhes</a>
-                    <a href="sitesprontosavenda.html" class="btn-orange py-2 px-4 rounded w-1/2 uppercase text-sm text-center">Comprar</a>
-                </div>
-            </div>
-
-            <div class="card-box rounded-lg p-6 flex flex-col items-center text-center">
-                <div class="w-full h-40 bg-gray-800 rounded mb-4 flex items-center justify-center border border-gray-700">
-                    <i class="fa-solid fa-cube text-4xl text-gray-600"></i>
-                </div>
-                <h2 class="text-xl font-bold uppercase mb-6">PACOTE BÁSICO</h2>
-                <div class="mt-auto flex gap-2 w-full">
-                    <a href="pacotebasico.html" class="btn-outline py-2 px-4 rounded w-1/2 uppercase text-sm text-center">Detalhes</a>
-                    <a href="pacotebasico.html" class="btn-orange py-2 px-4 rounded w-1/2 uppercase text-sm text-center">Comprar</a>
-                </div>
-            </div>
-
-            <div class="card-box rounded-lg p-6 flex flex-col items-center text-center">
-                <div class="w-full h-40 bg-gray-800 rounded mb-4 flex items-center justify-center border border-gray-700">
-                    <i class="fa-solid fa-layer-group text-4xl text-gray-600"></i>
-                </div>
-                <h2 class="text-xl font-bold uppercase mb-6">PACOTE MÉDIO</h2>
-                <div class="mt-auto flex gap-2 w-full">
-                    <a href="pacotemedio.html" class="btn-outline py-2 px-4 rounded w-1/2 uppercase text-sm text-center">Detalhes</a>
-                    <a href="pacotemedio.html" class="btn-outline py-2 px-4 rounded w-1/2 uppercase text-sm text-center hover:bg-white hover:text-black">Ver Mais</a>
-                </div>
-            </div>
-
-            <div class="card-box rounded-lg p-6 flex flex-col items-center text-center">
-                <div class="w-full h-40 bg-gray-800 rounded mb-4 flex items-center justify-center border border-gray-700">
-                    <i class="fa-solid fa-gem text-4xl text-gray-600"></i>
-                </div>
-                <h2 class="text-xl font-bold uppercase mb-6">PACOTE AVANÇADO</h2>
-                <a href="pacoteavancado.html" class="mt-auto btn-outline py-2 px-6 rounded w-full uppercase text-sm">
-                    Mais Detalhes
-                </a>
-            </div>
-
-            <div class="card-box rounded-lg p-6 flex flex-col items-center text-center">
-                <div class="w-full h-40 bg-gray-800 rounded mb-4 flex items-center justify-center border border-gray-700">
-                    <i class="fa-solid fa-infinity text-4xl text-gray-600"></i>
-                </div>
-                <h2 class="text-xl font-bold uppercase mb-6">PACOTE ILIMITADO</h2>
-                <a href="pacoteilimitado.html" class="mt-auto btn-orange py-2 px-6 rounded w-full uppercase text-sm shadow-[0_0_10px_rgba(234,88,12,0.5)]">
+                <h2 class="text-lg font-bold uppercase mb-6 tracking-wide text-gray-100">PACOTE ILIMITADO</h2>
+                <a href="pacoteilimitado.html" class="mt-auto btn-green py-3 px-6 rounded w-full shadow-[0_0_15px_rgba(34,197,94,0.4)]">
                     Comprar
                 </a>
             </div>
@@ -128,11 +183,11 @@
         </div>
     </main>
 
-    <footer class="text-center py-6 text-gray-600 text-xs relative z-10">
-        <p>&copy; 2026 Guitar Nonsense. Todos os direitos reservados.</p>
+    <footer class="text-center py-8 text-gray-500 text-xs relative z-10 border-t border-gray-900 bg-black/50">
+        <p>&copy; 2026 Guitar Nonsense. <span class="text-blue-500">Tecnologia & Sofisticação.</span></p>
     </footer>
 
-    <div style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; background: url('fundo_site.jpg') center/cover no-repeat; opacity: 0.4;"></div>
+    <div style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; background: url('index.jpeg') center/cover no-repeat; opacity: 0.5;"></div>
 
 </body>
 </html>
