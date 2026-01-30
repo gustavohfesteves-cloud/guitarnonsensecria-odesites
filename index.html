@@ -5,38 +5,100 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guitar Nonsense - Desenvolvedora de Sites</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
     <style>
-        body { font-family: 'Roboto', sans-serif; background-color: #050505; color: white; }
-        
-        /* Fonte da Marca (Sofisticada) */
-        .brand-font { font-family: 'Playfair Display', serif; }
-        
-        /* Card Base */
-        .card-box {
-            background-color: #111;
-            border: 1px solid #222;
-            transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            padding: 1.5rem;
-            border-radius: 0.75rem; /* rounded-xl */
+        body { 
+            background-color: #000000; 
+            color: white; 
+            font-family: 'Arial', sans-serif; /* Fonte simples e limpa */
         }
-        .card-box:hover {
+        
+        /* Efeito de hover no card para destacar a borda azul */
+        .card-item:hover {
+            border-color: #2563eb; /* Azul */
             transform: translateY(-5px);
-            border-color: #3b82f6;
-            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.15);
+            box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2);
         }
+    </style>
+</head>
+<body class="flex flex-col min-h-screen justify-between">
 
-        /* Botão Verde (Venda) */
-        .btn-green {
-            background-color: #16a34a;
-            color: white;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: all 0.2s;
+    <header class="text-center py-10">
+        <h1 class="text-2xl md:text-4xl font-bold uppercase tracking-widest text-white">
+            GuitarNonsense <span class="text-blue-600">Desenvolvedora de Sites</span>
+        </h1>
+        <div class="h-1 w-32 bg-gradient-to-r from-green-500 to-blue-600 mx-auto mt-4 rounded-full"></div>
+    </header>
+
+    <main class="container mx-auto px-4 mb-auto">
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+
+            <div class="card-item bg-gray-900 border border-gray-800 rounded-lg p-4 flex flex-col items-center transition-all duration-300">
+                <div class="w-full h-48 bg-black mb-4 rounded overflow-hidden border border-gray-700">
+                    <img src="pacotebasico.png" alt="Pacote Básico" class="w-full h-full object-cover">
+                </div>
+                <h2 class="text-lg font-bold uppercase mb-4 text-gray-100 tracking-wider">PACOTE BÁSICO</h2>
+                <div class="mt-auto flex gap-2 w-full">
+                    <a href="pacotebasico.html" class="flex-1 border border-gray-600 text-gray-300 text-center py-2 rounded text-xs hover:border-white hover:text-white transition uppercase font-bold">
+                        Detalhes
+                    </a>
+                    <a href="pacotebasico.html" class="flex-1 bg-green-600 text-white text-center py-2 rounded text-xs hover:bg-green-500 transition uppercase font-bold shadow-lg">
+                        Comprar
+                    </a>
+                </div>
+            </div>
+
+            <div class="card-item bg-gray-900 border border-gray-800 rounded-lg p-4 flex flex-col items-center transition-all duration-300">
+                <div class="w-full h-48 bg-black mb-4 rounded overflow-hidden border border-gray-700">
+                    <img src="pacotemedio.png" alt="Pacote Médio" class="w-full h-full object-cover">
+                </div>
+                <h2 class="text-lg font-bold uppercase mb-4 text-gray-100 tracking-wider">PACOTE MÉDIO</h2>
+                <div class="mt-auto flex gap-2 w-full">
+                    <a href="pacotemedio.html" class="flex-1 border border-gray-600 text-gray-300 text-center py-2 rounded text-xs hover:border-white hover:text-white transition uppercase font-bold">
+                        Detalhes
+                    </a>
+                    <a href="pacotemedio.html" class="flex-1 bg-green-600 text-white text-center py-2 rounded text-xs hover:bg-green-500 transition uppercase font-bold shadow-lg">
+                        Comprar
+                    </a>
+                </div>
+            </div>
+
+            <div class="card-item bg-gray-900 border border-gray-800 rounded-lg p-4 flex flex-col items-center transition-all duration-300">
+                <div class="w-full h-48 bg-black mb-4 rounded overflow-hidden border border-gray-700">
+                    <img src="pacoteavancado.png" alt="Pacote Avançado" class="w-full h-full object-cover">
+                </div>
+                <h2 class="text-lg font-bold uppercase mb-4 text-gray-100 tracking-wider">PACOTE AVANÇADO</h2>
+                <div class="mt-auto flex gap-2 w-full">
+                    <a href="pacoteavancado.html" class="flex-1 border border-gray-600 text-gray-300 text-center py-2 rounded text-xs hover:border-white hover:text-white transition uppercase font-bold">
+                        Detalhes
+                    </a>
+                    <a href="pacoteavancado.html" class="flex-1 bg-green-600 text-white text-center py-2 rounded text-xs hover:bg-green-500 transition uppercase font-bold shadow-lg">
+                        Comprar
+                    </a>
+                </div>
+            </div>
+
+            <div class="card-item bg-gray-900 border border-gray-800 rounded-lg p-4 flex flex-col items-center transition-all duration-300">
+                <div class="w-full h-48 bg-black mb-4 rounded overflow-hidden border border-gray-700">
+                    <img src="pacoteilimitado.png" alt="Pacote Ilimitado" class="w-full h-full object-cover">
+                </div>
+                <h2 class="text-lg font-bold uppercase mb-4 text-gray-100 tracking-wider">PACOTE ILIMITADO</h2>
+                <div class="mt-auto flex gap-2 w-full">
+                    <a href="pacoteilimitado.html" class="flex-1 border border-gray-600 text-gray-300 text-center py-2 rounded text-xs hover:border-white hover:text-white transition uppercase font-bold">
+                        Detalhes
+                    </a>
+                    <a href="pacoteilimitado.html" class="flex-1 bg-green-600 text-white text-center py-2 rounded text-xs hover:bg-green-500 transition uppercase font-bold shadow-lg">
+                        Comprar
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="text-center py-6 border-t border-gray-900 mt-10 text-gray-500 text-xs">
+        <p>&copy; 2026 Guitar Nonsense. Tecnologia & Sofisticação.</p>
+    </footer>
+
+</body>
+</html>
