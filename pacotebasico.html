@@ -5,95 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pacote Básico - Guitar Nonsense</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
-        body { font-family: 'Roboto', sans-serif; background-color: #111111; color: white; }
-        .brand-font { font-family: 'UnifrakturMaguntia', cursive; }
-        
-        /* Container de Vidro */
-        .glass-card {
-            background: rgba(31, 31, 31, 0.9);
-            border: 1px solid #333;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 0 30px rgba(0,0,0,0.5);
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #050505;
+            color: white;
         }
 
-        /* Botão Laranja Neon */
-        .btn-neon {
-            background-color: #ea580c;
-            color: white;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            box-shadow: 0 0 15px rgba(234, 88, 12, 0.4);
-            transition: all 0.3s;
+        /* Container do Card Principal */
+        .product-card {
+            border: 2px solid #2563eb; /* AZUL (Troca do Laranja) */
+            background-color: #0a0a0a;
+            box-shadow: 0 0 20px rgba(37, 99, 235, 0.2);
         }
-        .btn-neon:hover {
-            background-color: #c2410c;
-            box-shadow: 0 0 25px rgba(234, 88, 12, 0.7);
+
+        /* Caixa de Descrição Interna */
+        .description-box {
+            background-color: #111;
+            border: 1px solid #222;
+        }
+
+        /* Botão Principal */
+        .btn-action {
+            background-color: #2563eb; /* AZUL (Troca do Laranja) */
+            color: white;
+            transition: all 0.3s ease;
+        }
+        .btn-action:hover {
+            background-color: #1d4ed8;
+            box-shadow: 0 0 15px rgba(37, 99, 235, 0.6);
             transform: scale(1.02);
         }
-
-        /* Modal */
-        .modal { transition: opacity 0.25s ease; }
-        body.modal-active { overflow: hidden; }
     </style>
 </head>
-<body class="flex flex-col min-h-screen items-center justify-center p-4">
+<body class="min-h-screen flex flex-col items-center justify-center p-4 relative">
 
-    <div class="absolute top-4 left-4 z-20">
-        <a href="index.html" class="text-gray-400 hover:text-white transition-colors font-bold text-sm uppercase flex items-center gap-2">
-            <i class="fa-solid fa-arrow-left"></i> Voltar
+    <div class="absolute top-6 left-6">
+        <a href="index.html" class="text-gray-400 hover:text-white text-sm font-bold uppercase tracking-widest flex items-center gap-2 transition">
+            <i class="fas fa-arrow-left"></i> Voltar
         </a>
     </div>
 
-    <main class="glass-card w-full max-w-2xl rounded-2xl p-8 md:p-12 relative z-10 border-t-4 border-orange-600">
+    <div class="product-card w-full max-w-lg rounded-2xl p-8 mt-10 relative z-10">
         
-        <div class="text-center mb-8">
-            <i class="fa-solid fa-cube text-5xl text-orange-500 mb-4 drop-shadow-[0_0_10px_rgba(234,88,12,0.5)]"></i>
-            <h1 class="brand-font text-5xl md:text-6xl text-white tracking-wider mb-2">PACOTE BÁSICO</h1>
-            <p class="text-gray-400 font-bold uppercase tracking-[0.2em] text-sm">ESSENCIAL PARA O SEU NEGÓCIO</p>
+        <div class="w-full h-48 bg-black rounded-lg mb-6 flex items-center justify-center overflow-hidden border border-gray-800">
+            <img src="pacotebasico.png" alt="Pacote Básico" class="object-contain h-full w-full">
         </div>
 
-        <div class="bg-black/30 p-6 rounded-lg border border-gray-700 mb-8">
-            <p class="text-lg md:text-xl text-gray-200 leading-relaxed text-center font-light">
-                O <strong class="text-orange-500 font-bold">Pacote Básico</strong> oferece a criação de um site personalizado com o limite de <span class="text-white font-bold border-b border-orange-500">6 páginas</span> e <span class="text-white font-bold border-b border-orange-500">10 imagens</span> inseridas.
-                <br><br>
-                <span class="italic text-gray-400">Ideal para profissionais autônomos e micro-empresas.</span>
-            </p>
-        </div>
+        <p class="text-center text-gray-500 text-xs uppercase tracking-[0.2em] mb-6 font-bold">
+            Essencial para o seu negócio
+        </p>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8 text-sm text-gray-400">
-            <div class="flex items-center gap-2"><i class="fa-solid fa-check text-green-500"></i> Design Exclusivo</div>
-            <div class="flex items-center gap-2"><i class="fa-solid fa-check text-green-500"></i> Otimizado para Celular</div>
-            <div class="flex items-center gap-2"><i class="fa-solid fa-check text-green-500"></i> Botão WhatsApp Integrado</div>
-            <div class="flex items-center gap-2"><i class="fa-solid fa-check text-green-500"></i> Entrega Rápida</div>
-        </div>
-
-        <div class="flex flex-col items-center gap-4">
-            <div class="text-3xl font-bold text-white brand-font">
-                R$ <span id="display-price">199,90</span> </div>
-            <button onclick="abrirModal()" class="btn-neon w-full py-4 rounded-xl text-xl flex items-center justify-center gap-3">
-                QUERO ESTE PACOTE <i class="fa-solid fa-bolt"></i>
-            </button>
-        </div>
-
-    </main>
-
-    <div id="modal-pix" class="modal opacity-0 pointer-events-none fixed inset-0 z-50 flex items-center justify-center">
-        <div class="absolute inset-0 bg-black/90 backdrop-blur-sm" onclick="fecharModal()"></div>
-        
-        <div class="bg-slate-900 border border-orange-500/50 w-full max-w-md p-6 rounded-2xl shadow-2xl relative z-10 transform scale-95 transition-transform duration-300" id="modal-content">
-            <button onclick="fecharModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white">
-                <i class="fa-solid fa-xmark text-2xl"></i>
-            </button>
-
-            <div class="text-center">
-                <h2 class="text-2xl font-bold text-orange-500 mb-1 brand-font">PAGAMENTO PIX</h2>
-                <p class="text-sm text-gray-400 mb-6">Escaneie para garantir seu site agora</p>
-
-                <div class="bg-white p-2 rounded-lg inline-block mb-4">
-                    <img src="https://placehold.co/200x200/000/fff?text=QR+CODE+PIX" alt="QR Code Pix" class="w-48 h-48">
-                </div>
+        <div class="description-box p-6 rounded-lg mb-6 text-center">
+            <p class="text-gray-300 leading-relaxed mb-4">
+                O <span class="text-blue-500 font-bold">Pacote Básico</span> oferece a criação de um site personalizado com o limite de <u class="text-
