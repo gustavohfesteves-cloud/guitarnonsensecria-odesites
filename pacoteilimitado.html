@@ -3,53 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pacote Ilimitado - Guitar Nonsense</title>
+    <title>Pacote Avançado - Detalhes</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
-        body { font-family: 'Roboto', sans-serif; background-color: #111111; color: white; }
-        .brand-font { font-family: 'UnifrakturMaguntia', cursive; }
+        body { font-family: 'Roboto', sans-serif; background-color: #050505; color: white; }
         
-        /* Container de Vidro */
-        .glass-card {
-            background: rgba(31, 31, 31, 0.9);
-            border: 1px solid #333;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 0 30px rgba(0,0,0,0.5);
+        /* Borda e Brilho AZUL */
+        .card-container {
+            border: 2px solid #2563eb; 
+            background-color: #0a0a0a;
+            box-shadow: 0 0 30px rgba(37, 99, 235, 0.2);
         }
 
-        /* Botão Laranja Neon (Com pulsação extra) */
-        .btn-neon {
-            background-color: #ea580c;
-            color: white;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            box-shadow: 0 0 15px rgba(234, 88, 12, 0.4);
+        /* Botão AZUL */
+        .btn-blue {
+            background-color: #2563eb;
             transition: all 0.3s;
-            animation: pulse-glow 2s infinite;
         }
-        .btn-neon:hover {
-            background-color: #c2410c;
-            box-shadow: 0 0 30px rgba(234, 88, 12, 0.8);
+        .btn-blue:hover {
+            background-color: #1d4ed8;
+            box-shadow: 0 0 20px rgba(37, 99, 235, 0.6);
             transform: scale(1.02);
         }
-
-        @keyframes pulse-glow {
-            0% { box-shadow: 0 0 15px rgba(234, 88, 12, 0.4); }
-            50% { box-shadow: 0 0 25px rgba(234, 88, 12, 0.7); }
-            100% { box-shadow: 0 0 15px rgba(234, 88, 12, 0.4); }
-        }
-
-        /* Modal */
-        .modal { transition: opacity 0.25s ease; }
-        body.modal-active { overflow: hidden; }
     </style>
 </head>
-<body class="flex flex-col min-h-screen items-center justify-center p-4">
+<body class="min-h-screen flex flex-col items-center justify-center py-10 px-4">
 
-    <div class="absolute top-4 left-4 z-20">
-        <a href="index.html" class="text-gray-400 hover:text-white transition-colors font-bold text-sm uppercase flex items-center gap-2">
-            <i class="
+    <div class="absolute top-6 left-6">
+        <a href="index.html" class="text-gray-500 hover:text-white font-bold text-sm uppercase tracking-widest flex items-center gap-2 transition">
+            <i class="fas fa-arrow-left"></i> Voltar
+        </a>
+    </div>
+
+    <div class="card-container w-full max-w-md rounded-2xl p-6 relative flex flex-col items-center">
+        
+        <div class="w-full mb-6 rounded-lg overflow-hidden border border-gray-800 bg-black">
+            <img src="pacoteilimitado.png" alt="Pacote Ilimitado" class="w-full h-auto object-contain block">
+        </div>
+
+        <p class="text-center text-gray-500 text-[10px] uppercase tracking-[0.3em] font-bold mb-4">
+            Essencial para o seu negócio
+        </p>
+
+        <div class="bg-[#111] border border-[#222] rounded-xl p-5 text-center mb-6 w-full">
+            <p class="text-gray-300 text-sm leading-relaxed">
+                O <span class="text-blue-500 font-bold">Pacote Básico</span> Criação de site ilimitado com manutenção de 2 meses inclusa <strong class="text-white border-b border-gray-600"></strong> e <strong class="text-white border-b border-gray-600"></strong> .
+            </p>
+            <p class="text-gray-500 text-xs italic mt-3">
+                Ideal para profissionais autônomos e micro-empresas.
+            </p>
+        </div>
+<a href="pix499.jpeg" class="mt-8 block w-full bg-green-600 hover:bg-green-500 text-white font-bold text-center py-4 rounded-lg text-xl uppercase tracking-widest shadow-[0_0_15px_rgba(22,163,74,0.5)] transition transform hover:scale-105 border border-green-400">
+    COMPRAR
+</a>
+        <div class="grid grid-cols-2 gap-y-3 gap-x-2 text-xs text-gray-400 mb-8 w-full px-2">
+            <div class="flex items-center gap-2">
+                <i class="fas fa-check text-blue-5
