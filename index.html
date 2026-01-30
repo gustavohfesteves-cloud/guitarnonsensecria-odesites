@@ -16,104 +16,27 @@
         
         /* Card Base */
         .card-box {
-            background-color: #111; /* Preto levemente mais claro */
+            background-color: #111;
             border: 1px solid #222;
             transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 1.5rem;
+            border-radius: 0.75rem; /* rounded-xl */
         }
         .card-box:hover {
             transform: translateY(-5px);
-            border-color: #3b82f6; /* Azul no Hover */
+            border-color: #3b82f6;
             box-shadow: 0 10px 30px rgba(59, 130, 246, 0.15);
-        }
-
-        /* Card Destaque (Sites Prontos) */
-        .highlight-card {
-            border: 2px solid #3b82f6; /* Azul */
-            box-shadow: 0 0 20px rgba(59, 130, 246, 0.2);
-            background: linear-gradient(180deg, #111 0%, #0f172a 100%);
         }
 
         /* Botão Verde (Venda) */
         .btn-green {
-            background-color: #16a34a; /* Verde Sólido */
+            background-color: #16a34a;
             color: white;
             font-weight: bold;
             text-transform: uppercase;
             letter-spacing: 1px;
             transition: all 0.2s;
-            border: 1px solid #15803d;
-        }
-        .btn-green:hover {
-            background-color: #22c55e; /* Verde mais claro */
-            box-shadow: 0 0 15px rgba(34, 197, 94, 0.5);
-        }
-
-        /* Botão Outline */
-        .btn-outline {
-            border: 1px solid #444;
-            color: #ccc;
-            background: transparent;
-            transition: all 0.2s;
-            text-transform: uppercase;
-            font-size: 0.85rem;
-        }
-        .btn-outline:hover {
-            border-color: #fff;
-            color: white;
-            background: rgba(255,255,255,0.05);
-        }
-
-        /* Imagens dos Cards */
-        .card-img-container {
-            width: 100%;
-            height: 180px; /* Altura fixa para padronizar */
-            background-color: #000;
-            border-radius: 0.5rem;
-            margin-bottom: 1rem;
-            overflow: hidden;
-            border: 1px solid #333;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .card-img-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* Garante que a imagem cubra a área sem esticar */
-            transition: transform 0.5s;
-        }
-        .card-box:hover .card-img-container img {
-            transform: scale(1.05);
-        }
-    </style>
-</head>
-<body class="flex flex-col min-h-screen">
-
-    <header class="text-center py-10 relative z-10">
-        <h1 class="brand-font text-3xl md:text-5xl text-white tracking-widest uppercase font-bold drop-shadow-lg">
-            GuitarNonsense <span class="text-blue-500">Desenvolvedora de Sites</span>
-        </h1>
-        <div class="h-1 w-24 bg-gradient-to-r from-green-500 to-blue-500 mx-auto mt-4 rounded-full"></div>
-    </header>
-
-    <main class="container mx-auto px-4 pb-20 flex-1 relative z-10">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-
-            <div class="card-box rounded-xl p-6 flex flex-col items-center text-center">
-                <div class="card-img-container">
-                    <img src="sitesdesenvolvidospornos.png" alt="Portfolio">
-                </div>
-                <h2 class="text-lg font-bold uppercase mb-6 tracking-wide text-gray-100">SITES DESENVOLVIDOS<br>POR NÓS</h2>
-                <a href="sitesdesenvolvidospornos.html" class="mt-auto btn-outline py-3 px-6 rounded w-full">
-                    Mais Detalhes
-                </a>
-            </div>
-
-            <div class="card-box highlight-card rounded-xl p-6 flex flex-col items-center text-center relative transform md:-translate-y-4">
-                <div class="absolute -top-3 bg-blue-600 text-white text-xs font-bold px-4 py-1 rounded-full shadow-lg tracking-widest uppercase">
-                    Mais Popular
-                </div>
-                <div class="card-img-container" style="border-color: #3b82f6;">
-                    <img src="sitesprontosavenda.png" alt="Sites Prontos">
-                </div>
-                <p class="text-gray-400 text-xs font-bold uppercase mb-1 tracking-widest">A PARTIR
